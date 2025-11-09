@@ -1,0 +1,20 @@
+.date-picker {
+  .date-input {
+    width: 120px;
+    height: 33px;
+    border: none;
+    border-radius: 15px;
+    padding: 6px 12px;
+    font-size: 14px;
+    margin: 0;
+    outline: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+    &:focus {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+  }
+}
+::ng-deep .mat-datepicker-toggle-default-icon {
+  color: var(--primary-color);
+}

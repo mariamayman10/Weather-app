@@ -1,0 +1,28 @@
+<div class="all-cities-forecasts d-flex flex-wrap justify-content-center">
+  @for(cityForecast of forecasts; track cityForecast.id) {
+  <div class="forecast-card d-flex flex-column justify-content-center align-items-center" data-aos="zoom-in">
+    <p class="city-name" data-aos="fade-up">{{ cityForecast.city }}</p>
+    <img [src]="cityForecast.forecast[0].img" alt="" class="img mb-2" />
+    <p>{{ cityForecast.forecast[0].description }}</p>
+    <div class="d-flex gap-3">
+      <div class="temp-container d-flex align-items-center">
+      <i class="fi fi-rr-temperature-high me-2"></i>
+      <p class="m-0">
+        {{
+          isCelsius
+            ? cityForecast.forecast[0].temperatureCelsius
+            : cityForecast.forecast[0].temperatureFahrenheit
+        }}
+        <sup>&deg; {{ isCelsius ? "c" : "f" }}</sup>
+      </p>
+    </div>
+    <div class="humid-container d-flex align-items-center">
+      <i class="fi fi-rs-humidity me-2"></i>
+      <p class="m-0">
+        {{ cityForecast.forecast[0].humidity }}
+      </p>
+    </div>
+    </div>
+  </div>
+  }
+</div>

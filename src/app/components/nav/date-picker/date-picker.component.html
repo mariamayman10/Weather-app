@@ -1,0 +1,13 @@
+<div class="date-picker d-flex align-items-center">
+  <input
+    matInput
+    [matDatepicker]="picker"
+    [(ngModel)]="selectedDate"
+    [min]="minDate"
+    [max]="maxDate"
+    (dateChange)="onDateChange($event)"
+    class="date-input"
+  />
+  <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker panelClass="custom-datepicker-panel"></mat-datepicker>
+</div>

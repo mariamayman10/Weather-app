@@ -1,0 +1,30 @@
+<div class="search-bar">
+  <div class="input-container">
+    <input
+      type="text"
+      placeholder="Search City"
+      class="city-input me-2"
+      [value]="selectedCity ? selectedCity.city : ''"
+      (click)="toggleCities()"
+      (input)="search(searchInput.value)"
+      #searchInput
+    />
+  </div>
+  <div
+    class="cities d-flex flex-column justify-content-start"
+    *ngIf="citiesVisible"
+  >
+    @if(selectedCity){
+    <button class="city-btn me-2 mb-2" (click)="resetCityForecast()">
+      All Cities
+    </button>
+    } @for(item of filteredCities; track item.id) {
+    <button
+      class="city-btn me-2 mb-2"
+      (click)="selectCity(item)"
+    >
+      {{ item.city }}
+    </button>
+    }
+  </div>
+</div>

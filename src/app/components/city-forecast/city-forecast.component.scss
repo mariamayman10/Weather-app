@@ -1,0 +1,142 @@
+.city-forecast {
+  color: var(--text-color);
+  font-family: "Mulish", sans-serif;
+  .today-forecast {
+    .location{
+      font-size: 25px;
+      font-weight: bold;
+    }
+    .img-temp {
+      img {
+        width: 180px;
+        height: 180px;
+      }
+      .temp {
+        p {
+          font-size: 100px;
+          margin-bottom: 0px;
+          sup {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+    .description {
+      font-size: 70px;
+      font-weight: 300;
+    }
+    .humid-container {
+      font-size: 18px;
+      font-weight: 300;
+    }
+  }
+  .rest-summary {
+    padding: 15px 20px;
+    border: 1px solid var(--primary-color);
+    border-radius: 20px;
+    height: fit-content;
+    .summary-item {
+      width: 220px;
+      .yellow-div {
+        height: 30px;
+        width: 3px;
+        border-radius: 2px;
+        background-color: var(--button-hover);
+      }
+      .img-container {
+        width: 40px;
+        img {
+          width: 30px;
+          height: 30px;
+        }
+      }
+      .info {
+        width: 130px;
+        font-size: 15px;
+        font-weight: 300;
+        color: var(--text-color);
+      }
+      .temp {
+        font-size: 18px;
+        font-weight: 500;
+        color: var(--text-color);
+      }
+    }
+  }
+}
+@media (max-width: 1920px) {
+  .city-forecast {
+    padding: 80px 120px !important;
+    .today-forecast {
+      .description,
+      .humid-container {
+        margin-left: 60px !important;
+      }
+      .location{
+        margin-left: 50px !important;
+      }
+    }
+  }
+}
+@media (max-width: 1050px) {
+  .city-forecast {
+    padding: 80px 70px !important;
+  }
+}
+@media (max-width: 928px) {
+  .city-forecast {
+    .today-forecast {
+      .description {
+        width: 200px !important;
+      }
+    }
+  }
+}
+@media (max-width: 800px) {
+  .city-forecast {
+    padding: 70px 30px !important;
+    .today-forecast {
+      .img-temp {
+        img {
+          width: 140px !important;
+          height: 140px !important;
+        }
+        .temp {
+          p {
+            font-size: 80px !important;
+          }
+        }
+      }
+      .description {
+        font-size: 60px !important;
+      }
+    }
+  }
+}
+@media (max-width: 620px) {
+  .city-forecast {
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    text-align: center !important;
+    .today-forecast {
+      width: 100% !important;
+      margin-bottom: 20px !important;
+      .img-temp {
+        justify-content: center !important;
+      }
+      .description-container {
+        justify-content: center;
+        .description {
+          width: fit-content !important;
+        }
+      }
+      .humid-container {
+        justify-content: center !important;
+      }
+      .location, .description,
+      .humid-container {
+        margin-left: 0px !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+.all-cities-forecasts {
+  padding: 15px 16px;
+  gap: 15px;
+  .forecast-card {
+    width: 200px;
+    // height: 300px;
+    border-radius: 15px;
+    background-color: var(--card-bg);
+    color: var(--card-text);
+    padding:25px 20px;
+    border: 0.5px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    .city-name {
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .img {
+      width: 80px;
+      height: 80px;
+    }
+    .temp-container,
+    .humid-container {
+      i {
+        font-size: 18px;
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 1;
+      }
+      p {
+        font-size: 20px;
+        font-weight: 500;
+        sup{
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

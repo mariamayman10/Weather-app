@@ -1,0 +1,43 @@
+.search-bar {
+  position: relative;
+  .input-container {
+    input {
+      width: 300px;
+      border: none;
+      border-radius: 15px;
+      padding: 6px 12px;
+      font-size: 14px;
+      outline: none;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: box-shadow 0.3s;
+      &:focus {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+  .cities {
+    position: absolute;
+    display: none;
+    overflow-y: scroll;
+    top: 40px;
+    width: 300px;
+    height: fit-content;
+    max-height: 180px;
+    padding: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    button {
+      width: fit-content;
+      border: none;
+      outline: none;
+      background-color: transparent;
+      &:hover {
+        color: var(--button-texthover);
+      }
+    }
+  }
+  .cities::-webkit-scrollbar {
+    display: none;
+  }
+}

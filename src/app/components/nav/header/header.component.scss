@@ -1,0 +1,46 @@
+.header-container {
+  height: 68px;
+  .left-part {
+    .title {
+      font-weight: bold;
+      font-size: 17px;
+    }
+  }
+
+  .right-part {
+    .theme-container {
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      button {
+        background-color: var(--primary-color);
+        border: none;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        text-align: center;
+        vertical-align: middle;
+        transition: 0.5s;
+        i {
+          color: var(--button-text);
+          display: inline-block;
+          vertical-align: middle;
+          line-height: 1;
+        }
+        &:hover {
+          transition: 0.5s;
+          background-color: var(--button-hover);
+          i {
+            color: var(--button-texthover);
+          }
+        }
+      }
+    }
+    .temp-unit-container {
+      .unit {
+        font-weight: 500;
+        font-size: 17px;
+      }
+    }
+  }
+}

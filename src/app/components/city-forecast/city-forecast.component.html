@@ -1,0 +1,59 @@
+<div *ngIf="forecasts" 
+  class="city-forecast d-flex justify-content-between align-items-center"
+>
+  <div class="today-forecast">
+    <p class="location">{{forecasts.city }}</p>
+    <div class="img-temp d-flex align-items-center">
+      <div>
+        <img [src]="forecasts.forecast[selectedForecastDay].img" alt="" />
+      </div>
+      <div class="temp">
+        <p>
+          {{
+            isCelsius
+              ? forecasts.forecast[selectedForecastDay].temperatureCelsius
+              : forecasts.forecast[selectedForecastDay].temperatureFahrenheit
+          }}
+          <sup>&deg; {{ isCelsius ? "c" : "f" }}</sup>
+        </p>
+      </div>
+    </div>
+    <div class="description-container d-flex">
+      <p class="description">
+        {{ forecasts.forecast[selectedForecastDay].description }}
+      </p>
+    </div>
+    <div class="humid-container d-flex align-items-center">
+      <i class="fi fi-rs-humidity me-2"></i>
+      <p class="m-0">
+        Humidity: {{ forecasts.forecast[selectedForecastDay].humidity }}
+      </p>
+    </div>
+  </div>
+  <div class="rest-summary">
+    @for(forecast of forecasts.forecast; track forecast.date){
+    <div class="summary-item mb-2 d-flex align-items-center">
+      <div class="img-container d-flex">
+        @if(forecast.date === selectedDate){
+        <div class="yellow-div"></div>
+        }
+        <img [src]="forecast.img" alt="" />
+      </div>
+      <div class="info">
+        <p class="mb-0">{{ forecast.date | date : "EEEE" }}</p>
+        <p class="mb-0">{{ forecast.description }}</p>
+      </div>
+      <div class="temp">
+        <p class="mb-0">
+          {{
+            isCelsius
+              ? forecast.temperatureCelsius
+              : forecast.temperatureFahrenheit
+          }}
+          <sup>&deg; {{ isCelsius ? "c" : "f" }}</sup>
+        </p>
+      </div>
+    </div>
+    }
+  </div>
+</div>
