@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { environment } from '../../environment';
+import { ProductionEnvironment } from '../../environment';
 
 @Injectable({
   providedIn: 'root',
@@ -7,6 +7,6 @@ import { environment } from '../../environment';
 export class GlobalService {
   constructor() {}
 
-  hostName: string = environment.apiUrl;
+  hostName: string = ProductionEnvironment.apiUrl;
   forecastRoute: string = '';
 }
